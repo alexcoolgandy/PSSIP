@@ -1,0 +1,28 @@
+﻿<html ng-app="guitar">
+<head>
+	<meta charset="utf-8">
+	<link rel = "stylesheet" href = "css/css.css">
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+
+	<div ng-controller="IndexController">
+	
+		<input type = "">
+		
+		<div ng-if="!guitarSrc">
+			<input type="button" value="Взять кортинку"
+				ng-click="getImage()">
+		</div>
+		
+		<div ng-if="guitarSrc">
+			<input type="button" value="Удалить картинку"
+				ng-click="deleteImage()"><br>
+			<img ng-src="{{guitarSrc}}">
+		</div>
+	
+</body>
+
+</html>
